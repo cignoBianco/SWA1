@@ -294,7 +294,7 @@ div.device:hover {
     height: 650px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 1180px;
+    max-width: 1180px;
     margin-left: auto;
     margin-right: auto;
     justify-items: center;
@@ -341,10 +341,11 @@ article  section:nth-of-type(4) div section div div {
 }
 
 .shadowedBlock {
-    width: 360px;
+    max-width: 360px;
     border-radius: 5px;
     box-shadow: 0 0 20px 15px #0000000f;
     background: #fff;
+    min-width: 250px;
 }
 
 .shadowedBlock:hover {
@@ -465,10 +466,13 @@ article > section:nth-of-type(4) div section:last-of-type div div {
 #pricing {
     height: 836px;
     display: grid;
-    grid-template-columns: 330px min-content;
+    grid-template-columns: 330px 1fr;
     grid-gap: 2em;
     align-content: center;
+    width: max-content;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #pricing > div:first-of-type {
@@ -503,9 +507,10 @@ article > section:nth-of-type(4) div section:last-of-type div div {
 
 #pricing > div:last-of-type {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 590px;
-    width: min-content;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(auto-fill, minmax(203px, 360px));
+    min-height: 590px;
+    max-width: 850px;
     grid-gap: 50px;
 }
 /*
@@ -578,12 +583,13 @@ article section:nth-of-type(6) {
     height: 608px;
     display: grid;
     grid-template-columns: auto 1fr;
+    /*grid-template-columns: 60% 40%;*/
     grid-gap: 75px;
 }
 
 article section:nth-of-type(6) > div:first-of-type {
     width: 775px;
-    height: 608px;
+    min-height: 608px;
     border-top-right-radius: 300px;
     border-bottom-right-radius: 300px;
     background: url('images/Photo5.png');
@@ -593,7 +599,7 @@ article section:nth-of-type(6) > div:first-of-type {
 article section:nth-of-type(6) > div:last-of-type {
     display: grid;
     grid-template-rows: min-content 250px 45px;
-    height: 379px;
+    min-height: 379px;
     align-self: center;
     grid-gap: 20px;
     overflow: hidden;
@@ -618,6 +624,7 @@ article section:nth-of-type(6) .shadowedBlock {
 article section:nth-of-type(6) .shadowedBlock p {
     padding: 0 2em;
     font-size: 15px;
+    overflow: scroll;
 }
 
 article section:nth-of-type(6) .shadowedBlock > div {
@@ -638,7 +645,7 @@ article section:nth-of-type(6) a {
 }
 
 #pages h2 {
-    height: 73px;
+    min-height: 73px;
     background-image: url('images/figure.png');
     background-repeat: no-repeat;
     background-position-x: center;
@@ -693,7 +700,7 @@ article section:nth-of-type(6) a {
 }
 
 article > section:last-of-type {
-    height: 336px;
+    min-height: 336px;
     display: grid;
     align-content: center;
     grid-template-columns: 1fr 263px;
@@ -757,7 +764,7 @@ article > section:last-of-type .blueBtn div {
 }
 
 .backgroundBlueRomb.last {
-    right: 24em;
+    /*right: 24em;*/
     margin-top: 60px;
 }
 
@@ -848,9 +855,16 @@ footer ul:last-of-type {
 }*/
 
 #scroll img {
-    box-shadow: 0 0 10px 10px #06316573;
+    box-shadow: 0 0 10px 10px #06316521;
     position: fixed;
     bottom: 2.5em;
+}
+
+@media screen and (max-width: 650px) {
+    html {background: green;}
+    .backgroundBlueRomb {
+        display: none;
+    }
 }
 
 @keyframes rotate {
