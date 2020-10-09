@@ -908,6 +908,17 @@ footer ul:last-of-type {
         max-width: min-content;
     }
 
+    footer > div:last-of-type {
+        padding: 0;
+        grid-template-columns: 2fr 2fr 1fr 1fr;
+    }
+
+    article > section:last-of-type {
+        grid-template-columns: 1fr;
+        width: fit-content;
+        min-height: 200px;
+    }
+
     #features, #home {
         height: auto;
     }
