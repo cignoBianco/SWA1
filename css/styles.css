@@ -953,7 +953,14 @@ footer ul:last-of-type {
     }
 
     #pricing {
-        height: 700px;
+        min-height: 700px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: min-content;
+        margin-top: 3em;
+    }
+
+    #pricing > div:last-of-type {
+        justify-content: center;
     }
 
     article > section:first-child > div:last-child {
