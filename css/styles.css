@@ -967,6 +967,10 @@ footer ul:last-of-type {
         display: none;
     } 
 
+    article section:nth-of-type(6) {
+        align-content: flex-end;
+    }
+
     #pricing > div:last-of-type {
     height: max-content;
 }
