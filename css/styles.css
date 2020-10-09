@@ -860,11 +860,80 @@ footer ul:last-of-type {
     bottom: 2.5em;
 }
 
-@media screen and (max-width: 650px) {
-    html {background: green;}
-    .backgroundBlueRomb {
+@media (max-width: 750px) {
+    header {
+        width: 100%;
+        padding: 0;
+        height: 60px;
+    }
+
+    header > div:first-child a {
+        font-size: 20px;
+    }
+
+    header > div:first-child{
+        width: min-content;
+        height: 60px;
         display: none;
     }
+
+    header > nav >ul {
+        grid-template-columns: min-content min-content min-content min-content min-content;
+        grid-gap: 2em;
+        padding-left: 30px;
+    }
+
+    article > section:first-child > div:first-child {
+        width: 400px;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-top: 1em;
+    }
+
+    article > section:nth-of-type(3) > div:first-of-type > div:first-of-type,
+    article > section:nth-of-type(3) > div:last-of-type > div:last-of-type {
+        display: none;
+    }
+    article > section:nth-of-type(3) {
+        max-height: 1088px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: min-content;
+    }
+
+    #features, #home {
+        height: auto;
+    }
+
+    #features {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #features > div.shadowedBlock {
+        margin: 20px 0;
+    }
+
+    #pages {
+        height: fit-content;
+    }
+
+    article > section:nth-of-type(4) {
+        height: 600px; 
+        width: 400px;   
+    }
+
+    #pages > div:first-child {
+        width: 400px;
+    }
+
+    #pricing {
+        height: 700px;
+    }
+
+    article > section:first-child > div:last-child {
+        display: none;
+    }
+    
 }
 
 @keyframes rotate {
