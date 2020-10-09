@@ -956,7 +956,7 @@ footer ul:last-of-type {
         min-height: 700px;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: min-content;
-        margin-top: 3em;
+        margin-top: 10em;
     }
 
     #pricing > div:last-of-type {
@@ -964,6 +964,14 @@ footer ul:last-of-type {
     }
 
     article > section:first-child > div:last-child {
+        display: none;
+    } 
+
+    #pricing > div:last-of-type {
+    height: max-content;
+}
+
+    article section:nth-of-type(6) > div:first-of-type {
         display: none;
     }
     
