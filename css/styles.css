@@ -346,6 +346,7 @@ article  section:nth-of-type(4) div section div div {
     box-shadow: 0 0 20px 15px #0000000f;
     background: #fff;
     min-width: 250px;
+    width: 360px;
 }
 
 .shadowedBlock:hover {
@@ -570,7 +571,7 @@ article > section:nth-of-type(4) div section:last-of-type div div {
     text-align: center;
 }
 
-.shadowedBlock ul {
+.shadowedBlock ul, .shadowedBlock ul li {
     padding-bottom: 15px;
 }
 
@@ -634,7 +635,7 @@ article section:nth-of-type(6) .shadowedBlock > div {
 }
 
 article section:nth-of-type(6) a {
-    background-image: url('images/icons/Twitter icon.png');
+    background-image: url('images/icons/TwitterIcon.png');
     background-repeat: no-repeat;
 }
 
@@ -861,6 +862,10 @@ footer ul:last-of-type {
 }
 
 @media (max-width: 750px) {
+    body {
+        width: fit-content;
+    }
+
     header {
         width: 100%;
         padding: 0;
@@ -905,7 +910,9 @@ footer ul:last-of-type {
 
     #pages > div:last-child {
         grid-template-columns: auto;
-        max-width: min-content;
+        max-width: fit-content;
+        width: 320px;
+        height: 100%;
     }
 
     footer > div:last-of-type {
@@ -944,8 +951,9 @@ footer ul:last-of-type {
     }
 
     article > section:nth-of-type(4) {
-        height: 600px; 
+        height: 550px; 
         width: 400px;   
+        align-content: normal;
     }
 
     #pages > div:first-child {
@@ -957,6 +965,10 @@ footer ul:last-of-type {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: min-content;
         margin-top: 10em;
+        height: auto;
+        min-height: auto;
+        margin-top: 0;
+        grid-template-rows: auto;
     }
 
     #pricing > div:last-of-type {
@@ -968,15 +980,59 @@ footer ul:last-of-type {
     } 
 
     article section:nth-of-type(6) {
-        align-content: flex-end;
+        /*align-content: flex-end;*/
+        grid-gap: 0;
+        height: 100%;
+        grid-template-columns: 1fr;
+        margin-left: 20px;
+    }
+
+    .pagination {
+        display: none;
     }
 
     #pricing > div:last-of-type {
     height: max-content;
-}
+    }
 
     article section:nth-of-type(6) > div:first-of-type {
         display: none;
+    }
+
+    article section:nth-of-type(6) > div:last-of-type {
+        max-width: 450px;
+        min-height: 100%;
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-align: -webkit-center;
+        /* margin: 0 auto; */
+        padding-top: 113px;
+    }
+
+    article section:nth-of-type(6) > div:last-of-type > div:first-of-type {
+        width: 360px;
+        height: 100%;
+        min-height: 100%;
+        align-content: flex-start;
+        grid-template-columns: auto;
+        margin-top: 25px;
+    }
+
+    * {
+        max-width: -webkit-fill-available;
+    }
+
+    #plus {
+        display: none;
+    }
+
+    #pages > div:last-child > section:first-child {
+        display: block;
+    }
+
+    footer {
+        height: 350px;
     }
     
 }
